@@ -261,6 +261,7 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
                 {
                     perror("Error opening transfer file");
                     fclose(fptr);
+                    closedir(folder);
                     return;
                 }
                 fread(&*pt, sizeof(*pt), 1, fptrTransfer);
@@ -277,6 +278,7 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
                 if (fptr == NULL)
                 {
                     perror("Error opening file");
+                    closedir(folder);
                     return;
                 }
 
@@ -284,6 +286,7 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
                 if (fptrTransfer == NULL)
                 {
                     perror("Error opening transfer file");
+                    closedir(folder);
                     fclose(fptr);
                     return;
                 }
@@ -294,6 +297,7 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
                     perror("Error opening temp file");
                     fclose(fptr);
                     fclose(fptrTransfer);
+                    closedir(folder);
                     return;
                 }
                 fptrTemp2 = fopen("temp2.txt", "wb");
@@ -303,6 +307,7 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
                     fclose(fptr);
                     fclose(fptrTransfer);
                     fclose(fptrTemp);
+                    closedir(folder);
                     return;
                 }
 

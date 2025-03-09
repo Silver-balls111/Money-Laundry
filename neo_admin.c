@@ -31,7 +31,7 @@ bool accountNumberExists(int accNum)
             if (fptr == NULL)  
             {
                 printf("This file '%s' couldn't be opened to check if same account number already exists\n", file->d_name);
-                printf("Checking another file\n");
+                printf("\nChecking another file...\n");
                 fclose(fptr);
                 continue;
             }
@@ -117,10 +117,7 @@ int neo_admin()
     fwrite(&account, sizeof(account), 1, fp);
     fclose(fp);
 
-    // Display account details
     printf("\nAccount Created Successfully!\n");
-    printf("\nYour Account Details are:\n\nAccount Number: %u \nUsername: %s \nPassword: %s \nBalance: %.2lf\n", account.accountNumber, strupr(account.username),account.password, account.balance);
-
     
     strcpy(logged_in_user_file, final_accountNumber);
     FILE *fptr;
