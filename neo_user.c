@@ -96,6 +96,8 @@ void account_details(BankAccount *p)
 {
     clear_screen(); 
 
+    Beep(1000, 750);
+
     printf("\nYour account details are:\n");
     printf("\nAccount Number\t:\t %u\n", p->accountNumber);
     printf("Username\t:\t %s\n", p->username);
@@ -153,6 +155,9 @@ void adding_balance(BankAccount *p)
     rename("temp.txt", logged_in_user_file); 
 
     getch();
+
+    Beep(1000, 750);
+    
     clear_screen();
     
 }
