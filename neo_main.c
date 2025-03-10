@@ -42,7 +42,7 @@ int main()
 
                         clear_screen();
                         printf("Exited the system successfully\n");
-                        Beep(750, 800);
+                        Beep(1000, 750);
                         clear_screen();
                         break;
                     }
@@ -68,7 +68,7 @@ int main()
                             clear_screen();
                             printf("Exited the system successfully\n");
                         
-                            Beep(750, 800);
+                            Beep(1000, 750);
                             clear_screen();
                             break;
                         }
@@ -76,7 +76,7 @@ int main()
                         {
                             clear_screen();
                             printf("Exited the system successfully\n");
-                            Beep(750, 800);
+                            Beep(1000, 750);
                             clear_screen();
                             break;
                         }
@@ -92,7 +92,7 @@ int main()
 
                 clear_screen();
                 printf("Exited the system successfully\n");
-                Beep(750, 800);
+                Beep(1000, 750);
                 clear_screen();
                 
                 break;

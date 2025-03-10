@@ -17,7 +17,7 @@ int neo_login()
 {
     clear_screen();
 
-    Beep(750, 800);
+    Beep(1000, 750);
 
     printf("\t\tLoging In\t\t\n");
 

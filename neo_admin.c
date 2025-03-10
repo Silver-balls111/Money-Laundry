@@ -60,7 +60,7 @@ int neo_admin()
     
     clear_screen();
 
-    Beep(750, 800);
+    Beep(1000, 750);
 
     printf("\t\tWelcome To Money Laundry\t\t\n");
     printf("\nPlease enter the following details to create a new account:\n");

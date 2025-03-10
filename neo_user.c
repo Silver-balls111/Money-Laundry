@@ -34,7 +34,7 @@ void neo_user()
 
     clear_screen(); 
 
-    Beep(750, 800);
+    Beep(1000, 750);
 
     printf("\n\t \t Welcome %s \n", strupr(initial_user.username));
 
