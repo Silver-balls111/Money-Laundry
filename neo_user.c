@@ -34,13 +34,14 @@ void neo_user()
 
     clear_screen(); 
 
-    Beep(1000, 750);
-
-    printf("\n\t \t Welcome %s \n", strupr(initial_user.username));
-
     while (1) // Infinite loop
     {
-        while(getchar() != '\n'); // Clear the input buffer
+        Beep(1000, 650); 
+
+        printf("\n\t \t Welcome %s \n", strupr(initial_user.username));
+
+        //while(getchar() != '\n'); // Clear the input buffer
+
         printf("\nPress 1 to view your account details          :\n");
         printf("Press 2 to deposit amount to your account     :\n");
         printf("Press 3 to withdraw amount from your account  :\n");
@@ -96,7 +97,7 @@ void account_details(BankAccount *p)
 {
     clear_screen(); 
 
-    Beep(1000, 750);
+    Beep(1000, 600);
 
     printf("\nYour account details are:\n");
     printf("\nAccount Number\t:\t %u\n", p->accountNumber);
@@ -117,6 +118,8 @@ void adding_balance(BankAccount *p)
 
     while(1)
     {
+        Beep(1000, 600);
+
         printf("\nEnter the amount you want to deposit    : ");
         if (scanf("%lf", &deposit_amt) != 1)
         {
@@ -171,6 +174,8 @@ void withdraw_balance(BankAccount *p)
 
     while (1) // Loop to handle invalid input
     {
+        Beep(1000, 600);
+
         printf("Enter the amount you want to withdraw   : ");
         if (scanf("%lf", &withdraw_amt) != 1)
         {
@@ -229,6 +234,8 @@ void transfer_balance(BankAccount *p, BankAccount *pt)
 
     while (1) // Loop to handle invalid input
     {
+        Beep(1000, 600);
+
         printf("Enter the amount you want to transfer\t\t\t  :\t");
         if (scanf("%lf", &transfer_amt) != 1)
         {
@@ -350,6 +357,9 @@ int delete_account(BankAccount *p)
     clear_screen(); 
 
     char confirm_password[100];
+
+    Beep(1000, 600);
+    
     printf("\nEnter your password to confirm account deletion\t\t:\t");
     scanf("%s", confirm_password);
 

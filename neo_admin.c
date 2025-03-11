@@ -79,7 +79,7 @@ int neo_admin()
 
     // Take user input
     printf("\nEnter the username you want to use\t\t\t:\t");
-    scanf("%s", account.username);
+    scanf("%[^\n]s", account.username);
 
     while(1)
     {

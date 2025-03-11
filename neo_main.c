@@ -13,12 +13,20 @@ int main()
     while(1)
     {
         clear_screen(); 
+
+        Beep(1000, 750);
+        
         printf("\t\tWelcome to Money Laundry\t\t\n");
-        printf("\nPress 1 to log in\t: \n");
-        printf("Press 2 to sign in\t: \n");
-        printf("Press 3 to exit\t\t: ");
+        printf("\nPress 1 to log in.\t \n");
+        printf("Press 2 to sign in.\t \n");
+        printf("Press 3 to exit.\t\t \n");
+        printf("\nEnter your choice\t:\t");
         int choice;
         scanf(" %d", &choice);
+        while(getchar() != '\n'); // Clear the input buffer
+        {
+            // its an empty loop to remove the characters from the buffer
+        }
         switch(choice)
         {
             case 1:  
