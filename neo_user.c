@@ -42,12 +42,12 @@ void neo_user()
 
         //while(getchar() != '\n'); // Clear the input buffer
 
-        printf("\nPress 1 to view your account details          :\n");
-        printf("Press 2 to deposit amount to your account     :\n");
-        printf("Press 3 to withdraw amount from your account  :\n");
-        printf("Press 4 to transfer sum to another account    :\n");
-        printf("Press 5 to delete account                     :\n");
-        printf("Press 6 to exit\t\t\t\t      :\n");
+        printf("\nPress 1 to view your account details          \n");
+        printf("Press 2 to deposit amount to your account     \n");
+        printf("Press 3 to withdraw amount from your account  \n");
+        printf("Press 4 to transfer sum to another account    \n");
+        printf("Press 5 to delete account                     \n");
+        printf("Press 6 to exit\t\t\t\t      \n");
         printf("\nEnter your choice\t\t\t      :\t");
 
         if (scanf("%d", &choice) != 1)
